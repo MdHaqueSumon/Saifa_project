@@ -13,7 +13,6 @@ public class Highlighter {
 		
 	}
 	
-	
 	public void drawBorder(WebElement webelement, String color){
         WebElement element_node = webelement;
         JavascriptExecutor jse = (JavascriptExecutor) driver;
