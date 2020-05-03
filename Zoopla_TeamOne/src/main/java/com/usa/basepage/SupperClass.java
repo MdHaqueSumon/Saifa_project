@@ -36,14 +36,14 @@ public class SupperClass {
 
 	public final  void initialization() {
 		String browser = prop.getProperty("browser");
-		// If the browser is Fire-fox, then do this
+
 		if (browser.equalsIgnoreCase("Firefox")) {
 			logger.info("******** I am a firefox browser*********");
 			System.setProperty("webdriver.gecko.driver", "/Users/mohammedalam/geckodriver");
 			System.setProperty("webdriver.gecko.driver", "./Driver/geckodriver.exe");
 			System.out.println("getFirefoxDriver Method is running on Thread :: " + Thread.currentThread().getId());
 			driver = new FirefoxDriver();
-			// If browser is IE, then do this
+			
 
 		} else if (browser.equalsIgnoreCase("IE")) {
 			logger.info("******** I am a ie browser*********");
@@ -63,7 +63,7 @@ public class SupperClass {
 		} else if (browser.equalsIgnoreCase("Chrome")) {
 			logger.info("******** I am a Chrome browser*********");
 			System.setProperty("webdriver.chrome.driver", "/Users/mdhaque/Downloads/chromedriver");
-			//System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+			
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_SILENT_OUTPUT_PROPERTY,"true");
 			Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
 			System.out.println("getChormeDriver Method is running on Thread : " + Thread.currentThread().getId());
